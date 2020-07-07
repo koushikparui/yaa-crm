@@ -1,0 +1,116 @@
+header {
+  display: flex;
+  background: aliceblue;
+  padding: 1%;
+  border-radius: 0% 0% 60px 60px;
+}
+
+header font {
+  font-family: "Yellowtail", cursive;
+  font-size: 200%;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-weight: bold;
+  background: -webkit-linear-gradient(purple, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  position: relative;
+  left: 45vw;
+  border-radius: 12px;
+  padding: 0.5% 2%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: medium;
+  box-shadow: 0 9px #999;
+  background-color: blueviolet;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  border: 2px solid;
+  border-color: blueviolet;
+  border-radius: 12px;
+  color: blueviolet;
+}
+
+.btn-primary:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.logout {
+  border-radius: 9px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: medium;
+  box-shadow: 0 9px #999;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+}
+
+.logout:hover {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: blueviolet;
+  border-radius: 12px;
+  color: blueviolet;
+}
+
+.logout:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+body {
+  background: url("./Assets/You\ Are\ Awesome.png");
+  background-size: content repeat;
+  height: auto;
+  width: 100%;
+}
+
+.table {
+  background: #fdfafd;
+  border-collapse: collapse;
+  max-width: 100%;
+  margin: 0 auto;
+  scroll-behavior: auto;
+}
+
+.table th {
+  background-color: blueviolet;
+  color: white;
+}
+
+.container-fluid {
+  padding: 0%;
+  position: relative;
+}
+
+.add {
+  padding: 5% 0%;
+}
+
+/*responsive*/
+
+.table th,
+td {
+  white-space: nowrap;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: 0.5em;
+}

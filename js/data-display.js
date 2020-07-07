@@ -1,15 +1,14 @@
 // Your web app's Firebase configuration
 
-
 var firebaseConfig = {
-    apiKey: "AIzaSyDAqAubdilgRwKjM5uAQ3SErIkki1sN9j0",
-    authDomain: "yaa-crm.firebaseapp.com",
-    databaseURL: "https://yaa-crm.firebaseio.com",
-    projectId: "yaa-crm",
-    storageBucket: "yaa-crm.appspot.com",
-    messagingSenderId: "257463195769",
-    appId: "1:257463195769:web:c3c9b2407d90322ba65ca8",
-    measurementId: "G-PMJFM5ZSM4"
+  apiKey: "AIzaSyDAqAubdilgRwKjM5uAQ3SErIkki1sN9j0",
+  authDomain: "yaa-crm.firebaseapp.com",
+  databaseURL: "https://yaa-crm.firebaseio.com",
+  projectId: "yaa-crm",
+  storageBucket: "yaa-crm.appspot.com",
+  messagingSenderId: "257463195769",
+  appId: "1:257463195769:web:c3c9b2407d90322ba65ca8",
+  measurementId: "G-PMJFM5ZSM4",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -19,20 +18,12 @@ const mainData = [];
 function checkLoggedIn() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-      
       console.log(user);
+    } else {
+      window.location.href = "/login.html";
     }
-    else
-   { 
-    window.location.href = "/login.html";
-   } 
   });
 }
-
-
-
-
-
 
 function deleteData(id) {
   firebase
@@ -44,9 +35,9 @@ function deleteData(id) {
 }
 
 function displayData(dataObj) {
-    checkLoggedIn();
+  checkLoggedIn();
 
-    const tableBody = document.querySelector("#tablebody");
+  const tableBody = document.querySelector("#tablebody");
   var newData = "";
   for (const entries in dataObj) {
     if (dataObj.hasOwnProperty(entries)) {
@@ -66,19 +57,15 @@ function displayData(dataObj) {
     }
   }
   tableBody.innerHTML = newData;
- 
 }
 
 function getData() {
-    firebase
+  firebase
     .database()
     .ref("/list/")
     .on("value", (snapshot) => {
       displayData(snapshot.val());
     });
 }
-
-
-
 
 window.addEventListener("load", getData);

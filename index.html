@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CRM</title>
+  <head>
+    <title>YAACRM</title>
 
-        <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom css file -->
+    <link rel="stylesheet" href="./style.css" />
 
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-            
-        <a href="/data-entry.html"> <button type="button" class="btn btn-primary">ADD data</button></a>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-                <div class="h1">#You Are Awesome CRM</div>
-              <div class="table-responsive col-9 col-lg-6">   
-             <table class="table  table-hover table-striped">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid head">
+        <nav class="navbar">
+          <a class="navbar-brand" href="#">
+            <img src="/Assets/Asset 1@4x.png" width="70" height="70" class="d-inline-block" alt="">
+            <font>#You Are Awesome CRM</font>
+          </a>
+          <a href="/login.html">
+            <button class="btn btn-lg logout" type="button" >Logout</button>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="maindoc">
+      <div class="table-responsive container">
+          <table class="table table-hover table-striped table-bordered table-responsive-xl">
             <thead>
-             <tr>
-             <th>Customer Name</th>
-            <th>Phone No</th>
-            <th>Email</th>
-            <th>Purchased Items</th>
-            <th>Total Price</th>
-            <th>Delete</th>
-            </tr>
+              <tr><strong>
+                <th>Customer Name</th>
+                <th>Phone No</th>
+                <th>Email</th>
+                <th>Purchased Items</th>
+                <th>Total Price</th>
+                <th>Delete</th></strong>
+              </tr>
             </thead>
-            <tbody id="tablebody">
-            
-            </tbody>
-            </table>
-            </div>
+            <tbody id="tablebody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container-fluid add">
+      <a href="/data-entry.html">
+        <button type="button" class="btn btn-primary">
+          <strong>ADD</strong>
+        </button>
+      </a>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
 
-
-
-
-
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
 
-		
+    <!-- Initialize Firebase -->
 
-        <!-- Initialize Firebase -->
-       
-        <script src="js/data-display.js"></script>
-
-
-
-    </body>
-
+    <script src="js/data-display.js"></script>
+  </body>
 </html>

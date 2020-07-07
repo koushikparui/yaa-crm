@@ -1,0 +1,21 @@
+.btn:hover {
+  transform: scale(1.1);
+  transition: 1s ease-in-out;
+}
+
+.return {
+  border-color: white;
+  border-width: medium;
+}
+
+body {
+  background-image: linear-gradient(to right, #7b3d91, #f8ef24);
+}
+
+.container {
+  border-radius: 3%;
+}
+
+.h1 {
+  padding-bottom: 8%;
+}
